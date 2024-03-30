@@ -10,6 +10,7 @@ let blogPost = [
   { id: 2, title: 'Second Post', content: 'This is my second post' },
 ]
 
+app.get('/', (c) => c.text('Hello Hono!'))
 // get post by ID
 app.get('/posts/:id', (c) => {
   const id = Number(c.req.param('id'));
