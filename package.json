@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts"
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "build": "esbuild --bundle src/index.ts --format=esm --outfile=dist/_worker.js"
   },
   "dependencies": {
     "hono": "^4.1.5"
